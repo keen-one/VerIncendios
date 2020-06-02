@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">Ver Incendios</string>
+  <string name="appbar_scrolling_view_behavior">hola</string>
+  <string name="todo">todo</string>
+  <string name="direcci_n">Dirección</string>
+  <string name="_00_00_0000">00–00-0000</string>
+  <string name="_00_00">00:00</string>
+  <string name="_0_progreso">En reposo</string>
+  <string name="direccion">Dirección</string>
+  <string name="fuente_nasa_gob">(Fuente nasa.gob)</string>
+  <string name="localizacion">Localización</string>
+  <string name="direccion_desconocida">Dirección Desconocida</string>
+  <string name="localizacion_desconocida">Localización desconocida</string>
+  <string name="parar_servicio_en_segundo_plano">Parar servicio en segundo plano</string>
+  <string name="iniciar_en_segundo_plano">Iniciar en segundo plano</string>
+  <string name="completado">Completado, mostrando datos…</string>
+</resources>

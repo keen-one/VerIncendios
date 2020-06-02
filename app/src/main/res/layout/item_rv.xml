@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/fondo">
+  <androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/small"
+    app:cardBackgroundColor="@color/colorAccent"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/small">
+      <ImageView
+        android:id="@+id/img_fuego"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="@dimen/small"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/todo" />
+      <TextView
+        android:id="@+id/tv_direccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/img_fuego"
+        android:layout_toStartOf="@id/layout_tiempo"
+        android:text="@string/direcci_n"
+        android:textColor="@color/negro"
+        android:textSize="@dimen/font_size" />
+      <LinearLayout
+        android:id="@+id/layout_tiempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView
+          android:layout_width="43dp"
+          android:layout_height="43dp"
+          android:contentDescription="@string/todo"
+          app:srcCompat="@drawable/ic_reloj" />
+        <TextView
+          android:id="@+id/tv_fecha"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/_00_00_0000"
+          android:textAlignment="center"
+          android:textColor="@color/negro"
+          android:textSize="@dimen/font_size" />
+        <TextView
+          android:id="@+id/tv_tiempo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:drawableEnd="@drawable/ic_chile"
+          android:text="@string/_00_00"
+          android:textAlignment="center"
+          android:textColor="@color/negro"
+          android:textSize="@dimen/font_size" />
+      </LinearLayout>
+    </RelativeLayout>
+  </androidx.cardview.widget.CardView>
+</RelativeLayout>

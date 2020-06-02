@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="@dimen/small"
+  android:background="@color/fondo"
+  android:keepScreenOn="true"
+  tools:context=".MainActivity">
+  <Button
+    android:id="@+id/btn_start_servicio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/small"
+    android:layout_alignParentTop="true"
+    android:padding="@dimen/small"
+    android:background="@drawable/button_background"
+    android:drawableStart="@drawable/ic_play_arrow"
+    android:onClick="comenzarServicio"
+    android:text="@string/iniciar_en_segundo_plano"
+    android:textColor="@color/blanco"
+    android:textSize="@dimen/font_size" />
+  <Button
+    android:id="@+id/btn_stop_servicio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/small"
+    android:layout_below="@id/btn_start_servicio"
+    android:padding="@dimen/small"
+    android:background="@drawable/button_background"
+    android:drawableStart="@drawable/ic_stop"
+    android:onClick="pararServicio"
+    android:text="@string/parar_servicio_en_segundo_plano"
+    android:textColor="@color/blanco"
+    android:textSize="@dimen/font_size" />
+  <ProgressBar
+    android:id="@+id/progressBar"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/small"
+    android:layout_below="@id/btn_stop_servicio"
+    android:layout_centerHorizontal="true" />
+  <TextView
+    android:id="@+id/tv_progreso"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/small"
+    android:layout_below="@id/progressBar"
+    android:text="@string/_0_progreso"
+    android:textAlignment="center"
+    android:textColor="@color/blanco"
+    android:textSize="@dimen/font_size" />
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/my_rv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/small"
+    android:layout_below="@id/tv_progreso" />
+  <ImageView
+    android:id="@+id/img_lanzador"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/my_rv"
+    android:contentDescription="@string/todo"
+    android:scaleType="fitCenter"
+    android:src="@mipmap/ic_launcher_foreground" />
+</RelativeLayout>

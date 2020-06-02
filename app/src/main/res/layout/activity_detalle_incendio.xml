@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:keepScreenOn="true"
+  tools:context=".DetalleIncendio">
+  <RelativeLayout
+    android:id="@+id/layout_direccion"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:padding="@dimen/small"
+    android:background="@color/colorPrimary">
+    <TextView
+      android:id="@+id/tv_direccion"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/small"
+      android:layout_centerHorizontal="true"
+      android:text="@string/direccion"
+      android:textAlignment="center"
+      android:textColor="@color/blanco"
+      android:textSize="@dimen/font_size" />
+    <TextView
+      android:id="@+id/tv_localizacion"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/small"
+      android:layout_above="@id/tv_fuente"
+      android:layout_below="@id/tv_direccion"
+      android:text="@string/localizacion"
+      android:textAlignment="center"
+      android:textColor="@color/blanco"
+      android:textSize="@dimen/font_size" />
+    <TextView
+      android:id="@+id/tv_fuente"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/small"
+      android:layout_marginBottom="@dimen/large"
+      android:layout_marginStart="@dimen/small"
+      android:layout_marginEnd="@dimen/small"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:text="@string/fuente_nasa_gob"
+      android:textColor="@color/blanco"
+      android:textSize="@dimen/font_size" />
+  </RelativeLayout>
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-25dp"
+    android:layout_marginEnd="@dimen/small"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@id/layout_direccion"
+    android:clickable="true"
+    android:onClick="prepararLLamada"
+    android:src="@drawable/ic_call_white_24dp"
+    app:backgroundTint="@color/fondo" />
+  <org.osmdroid.views.MapView
+    android:id="@+id/miMapa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/layout_direccion" />
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
